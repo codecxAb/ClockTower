@@ -1,17 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Rajdhani', sans-serif;
+    color: #EFE1C4;
 }
 /* Custom Scrollbar for better aesthetics */
 ::-webkit-scrollbar {
     width: 8px;
 }
 ::-webkit-scrollbar-track {
-    background: #1f2937; 
+    background: #18181B; 
 }
 ::-webkit-scrollbar-thumb {
-    background: #4b5563; 
+    background: #F97316; 
     border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #6b7280; 
+    background: #ea580c; 
 }
