@@ -147,19 +147,29 @@ class BuilderProvider extends ChangeNotifier {
 
   void _startUpdateTimer() {
     _updateTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      // Only update if there are active timers to improve battery efficiency
+      bool hasActiveTimers = false;
       bool hasChanges = false;
+      
       for (var builders in _accountBuilders.values) {
         for (var builder in builders) {
-          if (builder.isActive && builder.isCompleted) {
-            builder.isActive = false;
-            hasChanges = true;
+          if (builder.isActive) {
+            hasActiveTimers = true;
+            if (builder.isCompleted) {
+              builder.isActive = false;
+              hasChanges = true;
+            }
           }
         }
       }
-      if (hasChanges) {
-        _saveData();
+      
+      // Only notify listeners when there are active timers or when state changes
+      if (hasActiveTimers || hasChanges) {
+        if (hasChanges) {
+          _saveData();
+        }
+        notifyListeners();
       }
-      notifyListeners();
     });
   }
 
