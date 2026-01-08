@@ -11,9 +11,16 @@ A multi-account builder timer app for Clash of Clans with local notifications an
 - 💾 **Data Persistence** - All timers and accounts are saved locally
 - 📱 **Compact Design** - Minimal and space-efficient interface
 
+## Screenshots
+
+<p align="center">
+  <img src="homePage.png" alt="Clock Tower Home Screen" width="300"/>
+</p>
+
 ## Download
 
 ### Android
+
 Download the latest APK from the [Releases](https://github.com/codecxAb/Clocktower/releases) page.
 
 **Direct Download:** [Clock Tower v1.0 APK](https://github.com/codecxAb/Clocktower/releases/download/v1.0/ClockTower-v1.0.apk)
@@ -28,17 +35,20 @@ Download the latest APK from the [Releases](https://github.com/codecxAb/Clocktow
 ## Usage
 
 ### Account Management
+
 - **Add Account:** Tap the "+" button in the top-right corner
 - **Switch Accounts:** Tap any account card in the horizontal list
 - **Rename/Delete:** Long-press an account card
 
 ### Builder Management
+
 - **Start Timer:** Tap "START TIMER" on any idle builder
 - **Add Builder:** Tap "ADD BUILDER" (max 7 per account)
 - **Remove Builder:** Tap the X icon on idle builders (min 2 per account)
 - **Cancel Timer:** Tap "CANCEL TIMER" on active timers
 
 ### Notifications
+
 - Receive notifications when builder timers complete
 - Notifications work even when the app is closed
 - Each builder has a unique notification
@@ -46,6 +56,7 @@ Download the latest APK from the [Releases](https://github.com/codecxAb/Clocktow
 ## Technical Details
 
 ### Built With
+
 - **Flutter** 3.38.5
 - **Dart** 3.10.4
 - **flutter_local_notifications** - Local notification support
@@ -54,17 +65,20 @@ Download the latest APK from the [Releases](https://github.com/codecxAb/Clocktow
 - **timezone** - Timezone handling
 
 ### Requirements
+
 - Android 6.0 (API 23) or higher
 - ~50MB storage space
 
 ## Development
 
 ### Prerequisites
+
 - Flutter SDK 3.x
 - Android SDK
 - Dart 3.x
 
 ### Setup
+
 ```bash
 # Clone the repository
 git clone https://github.com/codecxAb/Clocktower.git
@@ -78,6 +92,7 @@ flutter run
 ```
 
 ### Build Release APK
+
 ```bash
 flutter build apk --release
 ```
@@ -85,6 +100,7 @@ flutter build apk --release
 ## Version History
 
 ### v1.0 (January 8, 2026)
+
 - Initial release
 - Multi-account support
 - Dynamic builder management (2-7 per account)
