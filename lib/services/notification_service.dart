@@ -63,6 +63,25 @@ class NotificationService {
         ?.requestExactAlarmsPermission();
 
     print('Exact alarm permission granted: $exactAlarmPermission');
+
+    // Create notification channel explicitly for Android
+    final androidImplementation =
+        flutterLocalNotificationsPlugin.resolvePlatformSpecificImplementation<
+            AndroidFlutterLocalNotificationsPlugin>();
+
+    if (androidImplementation != null) {
+      const AndroidNotificationChannel channel = AndroidNotificationChannel(
+        'builder_timer_channel',
+        'Builder Timers',
+        description: 'Notifications for builder timer completions',
+        importance: Importance.max,
+        playSound: true,
+        enableVibration: true,
+      );
+
+      await androidImplementation.createNotificationChannel(channel);
+      print('✅ Notification channel created');
+    }
   }
 
   // Show immediate notification for testing
@@ -172,11 +191,13 @@ class NotificationService {
         androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
         uiLocalNotificationDateInterpretation:
             UILocalNotificationDateInterpretation.absoluteTime,
+        payload: 'builder_timer_$id',
       );
 
       print('✅ Notification scheduled successfully!');
     } catch (e) {
       print('❌ Error scheduling notification: $e');
+      print('Stack trace: ${StackTrace.current}');
       rethrow;
     }
   }
