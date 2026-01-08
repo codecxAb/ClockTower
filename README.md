@@ -23,7 +23,7 @@ A multi-account builder timer app for Clash of Clans with local notifications an
 
 Download the latest APK from the [Releases](https://github.com/codecxAb/Clocktower/releases) page.
 
-**Direct Download:** [Clock Tower v1.0.0 APK](https://github.com/codecxAb/Clocktower/releases/download/v1.0.0/clocktower-v1.0.0.apk)
+**Direct Download:** [Clock Tower v1.0 APK](https://github.com/codecxAb/Clocktower/releases/download/v1.0/ClockTower-v1.0.apk)
 
 ## Installation
 
